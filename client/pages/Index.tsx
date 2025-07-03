@@ -62,17 +62,6 @@ const HeroSection = () => {
     <section className="px-4 sm:px-6 lg:px-36 py-16 lg:py-24">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div className="space-y-8">
-          <div className="flex items-center gap-4">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/fc270fbf8a853338f78b150c107bf06e2f282fe9?width=196"
-              alt="VybeCoderz Logo"
-              className="w-20 h-18"
-            />
-            <h1 className="font-researcher text-4xl lg:text-5xl text-black">
-              VYBECODERZ
-            </h1>
-          </div>
-
           <div className="space-y-4">
             <h2 className="font-inter text-4xl lg:text-6xl text-black leading-tight tracking-tight">
               Build Cool Stuff with <br className="hidden lg:block" />
@@ -84,6 +73,17 @@ const HeroSection = () => {
             At VybeCoderz we bring people together to Learn, Build & Exchange
             ideas. Your Journey for building apps using AI starts here.
           </p>
+
+          <div className="flex items-center gap-4">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/fc270fbf8a853338f78b150c107bf06e2f282fe9?width=196"
+              alt="VybeCoderz Logo"
+              className="w-20 h-18"
+            />
+            <h1 className="font-researcher text-4xl lg:text-5xl text-black">
+              VYBECODERZ
+            </h1>
+          </div>
 
           <div className="flex gap-4 flex-wrap">
             <button className="bg-vybecoderz-blue border border-black/20 rounded-full px-8 py-3 text-black font-inter text-sm font-medium backdrop-blur-sm">
