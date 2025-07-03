@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Montserrat+Alternates:wght@300;400;500;600&display=swap");
+
 @layer base {
   /**
    * Tailwind CSS theme
@@ -38,6 +40,38 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    /* VYBECODERZ Design Variables */
+    --vybecoderz-gradient-primary: linear-gradient(
+      180deg,
+      #e2e9f9 35.1%,
+      #fef2f2 61.54%
+    );
+    --vybecoderz-gradient-secondary: linear-gradient(
+      180deg,
+      #fef6ff 24.52%,
+      #e2e9f9 74.52%
+    );
+    --vybecoderz-gradient-card: linear-gradient(
+      180deg,
+      #e2e9f9 35.1%,
+      #fef2f2 61.54%,
+      #fef2f2 70.21%
+    );
+    --vybecoderz-gradient-footer: linear-gradient(
+      90deg,
+      rgba(254, 246, 255, 0.4) 25.96%,
+      rgba(226, 233, 249, 0.4) 74.04%
+    );
+    --vybecoderz-gradient-waitlist: linear-gradient(
+      180deg,
+      #e5e6ed 42.31%,
+      #e4d3f4 90.38%
+    );
+    --vybecoderz-blue: #bcc0ec;
+    --vybecoderz-peach: #f9efe7;
+    --vybecoderz-purple: #6239fd;
+    --vybecoderz-navy: #0c1b3f;
 
     --sidebar-background: 0 0% 98%;
 
