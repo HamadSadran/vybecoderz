@@ -13,7 +13,19 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        inter: ["Inter", "system-ui", "sans-serif"],
+        montserrat: ["Montserrat", "system-ui", "sans-serif"],
+        "montserrat-alt": ["Montserrat Alternates", "system-ui", "sans-serif"],
+        researcher: ["system-ui", "sans-serif"], // Fallback for custom font
+      },
       colors: {
+        vybecoderz: {
+          blue: "#BCC0EC",
+          peach: "#F9EFE7",
+          purple: "#6239FD",
+          navy: "#0C1B3F",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
