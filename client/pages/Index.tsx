@@ -80,7 +80,7 @@ const HeroSection = () => {
               alt="VybeCoderz Logo"
               className="w-20 h-18"
             />
-            <h1 className="font-researcher text-4xl lg:text-5xl text-black">
+            <h1 className="font-researcher text-5xl text-black leading-normal">
               VYBECODERZ
             </h1>
           </div>
@@ -194,15 +194,32 @@ const AudienceSection = () => {
                   "linear-gradient(179deg, rgba(252, 251, 252, 0.40) 21.13%, rgba(255, 247, 254, 0.40) 61.81%)",
               }}
             >
-              <h3 className="font-inter text-3xl lg:text-4xl text-black font-light leading-tight tracking-tight mb-6">
+              <h3
+                className="font-inter text-5xl text-black font-light leading-tight tracking-tight mb-6"
+                style={{
+                  fontSize: "47px",
+                  letterSpacing: "-2.4px",
+                  lineHeight: "126%",
+                }}
+              >
                 Built for Creative Builders
               </h3>
-              <p className="font-montserrat text-xl lg:text-2xl text-black leading-normal mb-8">
+              <p
+                className="font-montserrat text-black leading-normal mb-8 font-medium"
+                style={{ fontSize: "26px" }}
+              >
                 Join a peer-to-peer community where designers, PMs, founders,
                 and freelancers learn AI, build real products, and launch faster
                 — together.
               </p>
-              <a href="#" className="font-inter text-sm text-black">
+              <a
+                href="#"
+                className="font-inter text-black"
+                style={{
+                  fontSize: "14px",
+                  textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+                }}
+              >
                 Get Started now
               </a>
             </div>
@@ -223,10 +240,16 @@ const AudienceSection = () => {
                   className="w-16 h-12"
                 />
                 <div>
-                  <div className="font-inter text-2xl lg:text-3xl text-gray-600 font-normal">
+                  <div
+                    className="font-inter font-normal"
+                    style={{ fontSize: "28px", color: "#424242" }}
+                  >
                     100+
                   </div>
-                  <div className="font-inter text-lg text-gray-600">
+                  <div
+                    className="font-inter"
+                    style={{ fontSize: "19px", color: "#424242" }}
+                  >
                     Community member
                   </div>
                 </div>
@@ -238,10 +261,16 @@ const AudienceSection = () => {
                   className="w-16 h-12"
                 />
                 <div>
-                  <div className="font-inter text-2xl lg:text-3xl text-black font-normal">
+                  <div
+                    className="font-inter font-normal"
+                    style={{ fontSize: "28px", color: "#000" }}
+                  >
                     95%
                   </div>
-                  <div className="font-inter text-lg text-black">
+                  <div
+                    className="font-inter"
+                    style={{ fontSize: "19px", color: "#000" }}
+                  >
                     success rate
                   </div>
                 </div>
@@ -274,7 +303,14 @@ const AudienceSection = () => {
             },
           ].map((item, index) => (
             <div key={index} className="text-center space-y-4">
-              <h4 className="font-inter text-xl lg:text-2xl text-black font-light tracking-tight">
+              <h4
+                className="font-inter text-black font-light"
+                style={{
+                  fontSize: "26px",
+                  letterSpacing: "-1.4px",
+                  lineHeight: "126%",
+                }}
+              >
                 {item.title}
               </h4>
               <div className="w-32 h-px bg-black mx-auto"></div>
