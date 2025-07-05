@@ -539,6 +539,69 @@ const FeaturesSection = () => {
             </div>
           </div>
         </div>
+
+        {/* Additional Feature Cards */}
+        <div className="space-y-8 mt-8">
+          {/* Card 1: Turn ideas into working apps */}
+          <div className="max-w-[354px] mx-auto">
+            <div className="rounded-2xl border border-black bg-white overflow-hidden">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/bc913f1f0f054a5b9f05f743090abf27/78a061e08831440daa44689fa071d6b3?format=webp&width=800"
+                alt="Turn ideas into working apps"
+                className="w-full h-[350px] object-cover"
+              />
+              <div className="p-8 space-y-4">
+                <h3 className="font-inter text-[17px] text-black font-medium text-center">
+                  Turn ideas into working apps.
+                </h3>
+                <p className="font-inter text-[16px] text-black font-light leading-normal text-center">
+                  Join team-based sprints and solve real-world problems using
+                  no-code + AI tools.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 2: Pitch, post, or jump in */}
+          <div className="max-w-[354px] mx-auto">
+            <div className="rounded-2xl border border-black bg-white overflow-hidden">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/bc913f1f0f054a5b9f05f743090abf27/cba6d01e520e4de191332f2fa5c7cc61?format=webp&width=800"
+                alt="Pitch, post, or jump in"
+                className="w-full h-[207px] object-cover"
+              />
+              <div className="p-8 space-y-4">
+                <h3 className="font-inter text-[17px] text-black font-medium text-center">
+                  Pitch, post, or jump in.
+                </h3>
+                <p className="font-inter text-[17px] text-black font-light leading-normal text-center">
+                  Discover live projects, share your own, and find collaborators
+                  ready to build
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 3: Collaborative workspace */}
+          <div className="max-w-[354px] mx-auto">
+            <div className="rounded-2xl border border-black bg-white overflow-hidden">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/bc913f1f0f054a5b9f05f743090abf27/c696ae40871e4e4d828e1642da9993d3?format=webp&width=800"
+                alt="Collaborative workspace"
+                className="w-full h-[217px] object-cover"
+              />
+              <div className="p-8 space-y-4">
+                <h3 className="font-inter text-[17px] text-black font-medium text-center">
+                  Work together seamlessly.
+                </h3>
+                <p className="font-inter text-[17px] text-black font-light leading-normal text-center">
+                  Connect with fellow builders in our collaborative workspace
+                  environment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Desktop Layout */}
@@ -741,230 +804,109 @@ const WaitlistSection = () => {
 const Footer = () => {
   return (
     <footer className="px-4 lg:px-6 xl:px-36 py-8 lg:py-16">
-      {/* Mobile Layout */}
-      <div className="lg:hidden space-y-8">
-        <div className="text-center">
+      <div className="max-w-[237px] mx-auto lg:mx-0 space-y-8">
+        {/* Logo */}
+        <div className="flex justify-center lg:justify-start">
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/905b5021dc8508de212dd08ffffa3dcc949741a2?width=446"
             alt="VYBECODERZ Logo"
-            className="h-[67px] w-[223px] mx-auto mb-6"
+            className="h-[67px] w-[223px]"
           />
-          <div className="space-y-2">
-            <p className="font-inter text-xl text-black">+91 9978 673 855</p>
-            <p className="font-inter text-base text-black">
-              hello@vybecoderz.com
-            </p>
-          </div>
         </div>
 
+        {/* Contact Info */}
+        <div className="space-y-2 text-center lg:text-left">
+          <p className="font-inter text-xl text-black font-normal leading-8">
+            +91 9978 673 855
+          </p>
+          <p className="font-inter text-base text-black font-normal leading-8">
+            hello@vybecoderz.com
+          </p>
+        </div>
+
+        {/* Quick Links */}
         <div className="space-y-6">
-          <div>
-            <h4 className="font-inter text-2xl text-black font-normal mb-4">
-              Quick Links
-            </h4>
-            <div className="space-y-3">
-              <a href="#" className="block font-inter text-2xl text-black/65">
-                Product
-              </a>
-              <a href="#" className="block font-inter text-2xl text-black/65">
-                Information
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="font-inter text-lg text-black font-normal mb-4">
-              Services
-            </h4>
-            <div className="space-y-3">
-              <a href="#" className="block font-inter text-base text-black/65">
-                Full-Stack Development
-              </a>
-              <a href="#" className="block font-inter text-base text-black/65">
-                UI/UX Design
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="font-inter text-lg text-black font-normal mb-4">
-              Resources
-            </h4>
-            <div className="space-y-3">
-              <a href="#" className="block font-inter text-base text-black/65">
-                Blog
-              </a>
-              <a href="#" className="block font-inter text-base text-black/65">
-                Case Studies
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="font-inter text-lg text-black font-normal mb-4">
-              Subscribe
-            </h4>
-            <div className="flex rounded-md border border-blue-200/20 bg-white">
-              <Input
-                type="email"
-                placeholder="Get dev updates & insights"
-                className="flex-1 border-0 text-xs font-inter text-[#0A142F]/65 bg-transparent focus:ring-0 focus:outline-none px-4"
-              />
-              <button className="bg-[#478EFF] text-white p-3 rounded-r-md">
-                <svg
-                  className="w-3 h-4 -rotate-90"
-                  fill="white"
-                  viewBox="0 0 15 13"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M9.25275 12.8115L14.4073 7.53135C14.8819 7.04492 14.8819 6.25647 14.4073 5.77154L9.25275 0.491358L7.53443 2.25229L10.6146 5.40681H0.838379L0.838379 7.8957H10.6146L7.53443 11.0513L9.25275 12.8115Z"
-                  />
-                </svg>
-              </button>
-            </div>
+          <h4 className="font-inter text-2xl text-black font-normal leading-7 text-center lg:text-left">
+            Quick Links
+          </h4>
+          <div className="space-y-4">
+            <a
+              href="#"
+              className="block font-inter text-2xl text-black/65 font-normal text-center lg:text-left"
+            >
+              Product
+            </a>
+            <a
+              href="#"
+              className="block font-inter text-2xl text-black/65 font-normal text-center lg:text-left"
+            >
+              Information
+            </a>
           </div>
         </div>
-      </div>
 
-      {/* Desktop Layout */}
-      <div className="hidden lg:block">
-        <div
-          className="py-16"
-          style={{ background: "var(--vybecoderz-gradient-footer)" }}
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
-            <div className="lg:col-span-1">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/86d388d1c93f098a0c7783843a8bad78e17b9deb?width=388"
-                alt="VYBECODERZ Logo"
-                className="h-12 w-auto mb-6"
-              />
-              <div className="space-y-4">
-                <p className="font-inter text-lg text-black">
-                  +91 9978 673 855
-                </p>
-                <p className="font-inter text-base text-black">
-                  hello@vybecoderz.com
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-inter text-lg text-black font-normal mb-6">
-                Quick Links
-              </h4>
-              <div className="space-y-4">
-                <a
-                  href="#"
-                  className="block font-inter text-base text-black/65"
-                >
-                  Product
-                </a>
-                <a
-                  href="#"
-                  className="block font-inter text-base text-black/65"
-                >
-                  Information
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-inter text-lg text-black font-normal mb-6">
-                Services
-              </h4>
-              <div className="space-y-4">
-                <a
-                  href="#"
-                  className="block font-inter text-base text-black/65"
-                >
-                  Full-Stack Development
-                </a>
-                <a
-                  href="#"
-                  className="block font-inter text-base text-black/65"
-                >
-                  UI/UX Design
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-inter text-lg text-black font-normal mb-6">
-                Resources
-              </h4>
-              <div className="space-y-4">
-                <a
-                  href="#"
-                  className="block font-inter text-base text-black/65"
-                >
-                  Blog
-                </a>
-                <a
-                  href="#"
-                  className="block font-inter text-base text-black/65"
-                >
-                  Case Studies
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-inter text-lg text-black font-normal mb-6">
-                Subscribe
-              </h4>
-              <div className="space-y-4">
-                <div className="flex rounded-md border border-blue-200/20 bg-white">
-                  <Input
-                    type="email"
-                    placeholder="Get dev updates & insights"
-                    className="flex-1 border-0 text-sm font-inter bg-transparent focus:ring-0 focus:outline-none"
-                  />
-                  <button className="bg-blue-400 text-white p-3 rounded-r-md">
-                    <svg
-                      className="w-3 h-4 rotate-90"
-                      fill="white"
-                      viewBox="0 0 15 13"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M9.03058 12.3267L14.1852 7.04648C14.6598 6.56005 14.6598 5.77161 14.1852 5.28667L9.03058 0.00649452L7.31226 1.76743L10.3924 4.92194H0.616211L0.616211 7.41084H10.3924L7.31226 10.5665L9.03058 12.3267Z"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
+        {/* Services */}
+        <div className="space-y-6">
+          <h4 className="font-inter text-lg text-black font-normal leading-7 text-center lg:text-left">
+            Services
+          </h4>
+          <div className="space-y-4">
+            <a
+              href="#"
+              className="block font-inter text-base text-black/65 font-normal text-center lg:text-left"
+            >
+              Full-Stack Development
+            </a>
+            <a
+              href="#"
+              className="block font-inter text-base text-black/65 font-normal text-center lg:text-left"
+            >
+              UI/UX Design
+            </a>
           </div>
+        </div>
 
-          <div className="border-t border-black/20 pt-8">
-            <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
-              <div className="flex items-center gap-4">
-                <div className="flex gap-4">
-                  {[1, 2, 3, 4].map((i) => (
-                    <div
-                      key={i}
-                      className="w-10 h-10 rounded-full border border-black/25 flex items-center justify-center"
-                    >
-                      <div className="w-4 h-4 bg-black"></div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+        {/* Resources */}
+        <div className="space-y-6">
+          <h4 className="font-inter text-lg text-black font-normal leading-7 text-center lg:text-left">
+            Resources
+          </h4>
+          <div className="space-y-4">
+            <a
+              href="#"
+              className="block font-inter text-base text-black/65 font-normal text-center lg:text-left"
+            >
+              Blog
+            </a>
+            <a
+              href="#"
+              className="block font-inter text-base text-black/65 font-normal text-center lg:text-left"
+            >
+              Case Studies
+            </a>
+          </div>
+        </div>
 
-              <div className="text-center lg:text-left">
-                <p className="font-inter text-base text-black">A product of</p>
-              </div>
-
-              <div className="text-center lg:text-right">
-                <p className="font-inter text-base text-black">
-                  © 2025 Vybe Coderz. All rights reserved.
-                </p>
-              </div>
-            </div>
+        {/* Subscribe */}
+        <div className="space-y-6">
+          <h4 className="font-inter text-lg text-black font-normal leading-7 text-center lg:text-left">
+            Subscribe
+          </h4>
+          <div className="flex rounded-md border border-blue-200/20 bg-white w-[226px] h-[47px] mx-auto lg:mx-0">
+            <Input
+              type="email"
+              placeholder="Get dev updates & insights"
+              className="flex-1 border-0 text-xs font-inter text-[#0A142F]/65 bg-transparent focus:ring-0 focus:outline-none px-4"
+            />
+            <button className="bg-[#478EFF] text-white w-[46px] h-[47px] flex items-center justify-center rounded-r-md">
+              <svg className="w-3 h-[14px]" fill="white" viewBox="0 0 15 13">
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M9.25275 12.8115L14.4073 7.53135C14.8819 7.04492 14.8819 6.25647 14.4073 5.77154L9.25275 0.491358L7.53443 2.25229L10.6146 5.40681H0.838379L0.838379 7.8957H10.6146L7.53443 11.0513L9.25275 12.8115Z"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -975,7 +917,6 @@ const Footer = () => {
 export default function Index() {
   return (
     <div
-      className="min-h-screen"
       style={{
         background: "linear-gradient(180deg, #E2E9F9 35.1%, #FEF2F2 61.54%)",
       }}
