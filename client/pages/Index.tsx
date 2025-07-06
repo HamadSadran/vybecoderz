@@ -693,8 +693,41 @@ const FeaturesSection = () => {
   );
 };
 
+import { useNavigate } from "react-router-dom";
+import { getFirestore, collection, addDoc, serverTimestamp } from "firebase/firestore";
+import app, { db, auth } from "../firebase";
+
+
 const WaitlistSection = () => {
   const [email, setEmail] = useState("");
+  const navigate = useNavigate();
+  const db = getFirestore(app);
+
+  const handleSubscribe = async () => {
+  if (!email || !email.includes("@")) {
+    alert("Please enter a valid email.");
+    return;
+  }
+
+  try {
+    await addDoc(collection(db, "waitlist"), {
+      email,
+      timestamp: serverTimestamp()
+    });
+
+    navigate("/confirmation");
+  } catch (error) {
+    console.error("Error saving email to Firestore:", error);
+    alert("Something went wrong, please try again.");
+  }
+};
+
+  // const handleSubscribe = () => {
+  //   if (email.trim()) {
+  //     // Optional: add email to backend/Firebase here
+  //     navigate("/confirmation");
+  //   }
+  // };
 
   return (
     <section className="px-4 lg:px-6 xl:px-36 py-8 lg:py-16">
@@ -724,7 +757,10 @@ const WaitlistSection = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 className="flex-1 border-0 text-center font-inter text-xs bg-transparent focus:ring-0 focus:outline-none"
               />
-              <button className="bg-vybecoderz-purple text-white px-4 py-3 font-inter text-xs font-medium rounded-r-2xl">
+              <button
+                onClick={handleSubscribe}
+                className="bg-vybecoderz-purple text-white px-4 py-3 font-inter text-xs font-medium rounded-r-2xl"
+              >
                 →
               </button>
             </div>
@@ -732,10 +768,12 @@ const WaitlistSection = () => {
 
           <div className="flex items-center justify-center gap-2">
             <div className="flex gap-1">
-              <div className="w-[14px] h-[21px] rounded-full bg-gray-300 border border-white"></div>
-              <div className="w-[14px] h-[21px] rounded-full bg-gray-300 border border-white"></div>
-              <div className="w-[14px] h-[21px] rounded-full bg-gray-300 border border-white"></div>
-              <div className="w-[14px] h-[21px] rounded-full bg-gray-300 border border-white"></div>
+              {[1, 2, 3, 4].map((i) => (
+                <div
+                  key={i}
+                  className="w-[14px] h-[21px] rounded-full bg-gray-300 border border-white"
+                ></div>
+              ))}
             </div>
           </div>
           <p className="font-inter text-[11px] text-black font-light text-center mt-2">
@@ -748,8 +786,7 @@ const WaitlistSection = () => {
       <div className="hidden lg:block">
         <div className="text-center space-y-8 mb-16">
           <h2 className="font-inter text-4xl lg:text-5xl text-black text-center tracking-tight leading-tight">
-            The wait is almost over —
-            <br />
+            The wait is almost over —<br />
             <span className="font-researcher">VYBECODERZ</span> is launching
             soon
           </h2>
@@ -776,7 +813,10 @@ const WaitlistSection = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 className="flex-1 border-0 text-center font-inter text-lg lg:text-xl bg-transparent focus:ring-0 focus:outline-none"
               />
-              <button className="bg-vybecoderz-purple text-white px-6 py-4 font-inter text-sm font-medium rounded-r-2xl">
+              <button
+                onClick={handleSubscribe}
+                className="bg-vybecoderz-purple text-white px-6 py-4 font-inter text-sm font-medium rounded-r-2xl"
+              >
                 Subscribe now
               </button>
             </div>
@@ -800,6 +840,9 @@ const WaitlistSection = () => {
     </section>
   );
 };
+
+// export default WaitlistSection;
+
 
 const Footer = () => {
   return (
